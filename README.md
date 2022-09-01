@@ -6,6 +6,12 @@ to be retrained with the same cadence, necessitating an end-to-end pipeline that
 
 In this project you will build such a pipeline.
 
+Github repo URL: 
+[https://github.com/lazem/build-ml-pipeline-for-short-term-rental-prices](https://github.com/lazem/build-ml-pipeline-for-short-term-rental-prices)
+
+Weights & Biases project URL:
+[https://wandb.ai/lazem/nyc_airbnb](https://wandb.ai/lazem/nyc_airbnb)
+
 ## Table of contents
 
 - [Introduction](#build-an-ML-Pipeline-for-Short-Term-Rental-Prices-in-NYC)
