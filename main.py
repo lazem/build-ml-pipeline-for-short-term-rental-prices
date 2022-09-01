@@ -44,7 +44,7 @@ def go(config: DictConfig):
                     "sample": config["etl"]["sample"],
                     "artifact_name": "sample.csv",
                     "artifact_type": "raw_data",
-                    "artifact_description": "Raw file as downloaded"
+                    "artifact_description": "Raw_file"
                 },
             )
 
@@ -56,7 +56,7 @@ def go(config: DictConfig):
                     "input_artifact": "sample.csv:latest",
                     "output_artifact": "clean_sample.csv",
                     "output_type": "clean_sample",
-                    "output_description": "Data with outliers and null values removed",
+                    "output_description": "Outlier_removed",
                     "min_price": config['etl']['min_price'],
                     "max_price": config['etl']['max_price']
                 },
@@ -88,7 +88,6 @@ def go(config: DictConfig):
             )
 
         if "train_random_forest" in active_steps:
-
             # NOTE: we need to serialize the random forest configuration into JSON
             rf_config = os.path.abspath("rf_config.json")
             with open(rf_config, "w+") as fp:
