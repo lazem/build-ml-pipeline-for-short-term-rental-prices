@@ -39,7 +39,7 @@ def go(args):
     # Save to output files
     for df, k in zip([trainval, test], ['trainval', 'test']):
         logger.info(f"Uploading {k}_data.csv dataset")
-        with tempfile.NamedTemporaryFile("w") as fp:
+        with tempfile.NamedTemporaryFile("w", delete=False) as fp:
 
             df.to_csv(fp.name, index=False)
 
@@ -50,6 +50,8 @@ def go(args):
                 fp.name,
                 run,
             )
+
+    wandb.finish()
 
 
 if __name__ == "__main__":

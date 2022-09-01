@@ -22,6 +22,7 @@ def data(request):
     if data_path is None:
         pytest.fail("You must provide the --csv option on the command line")
 
+    wandb.finish()
     df = pd.read_csv(data_path)
 
     return df
@@ -38,6 +39,7 @@ def ref_data(request):
     if data_path is None:
         pytest.fail("You must provide the --ref option on the command line")
 
+    wandb.finish()
     df = pd.read_csv(data_path)
 
     return df
